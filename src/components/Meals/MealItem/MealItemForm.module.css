@@ -18,3 +18,17 @@
     background-color: #641e03;
     border-color: #641e03;
   }
+
+  .button {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #694536;
+    color: white;
+    padding: 0.75rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    font-weight: bold;
+  }

@@ -6,10 +6,6 @@ import CartCntxt from '../../store/cart-context'
 const Cart = (props) => {
   const cartcntx = useContext(CartCntxt);
 
-  const decreaseItemHandler = (name) => {
-    cartcntx.removeItem(name);
-  };
-  
 
   const cartItems = (
     <ul className={classes['cart-items']}>
@@ -31,7 +27,7 @@ const Cart = (props) => {
             </div>
           </div>
           <div className={classes.actions}>
-           <button onClick={() => decreaseItemHandler(item.name)}>−</button>
+           <button onClick={() => cartcntx.removeItem(item.id)}>−</button>
            <button onClick={() => cartcntx.addItem({ ...item, quantity: 1 })}>+</button>
           </div>
         </li>
